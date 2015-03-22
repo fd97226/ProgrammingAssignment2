@@ -4,10 +4,10 @@
 ## Write a short comment describing this function
 
 makeCacheMatrix <- function(x = matrix()) {
-  m <- NULL
+  m <- matrix(nrow=0, ncol=0)
   set <- function(y) {
     x <<- y
-    m <<- NULL
+    m <<- matrix(nrow=0, ncol=0)
   }
   get <- function() x
   setinv <- function(inv) m <<- inv
@@ -33,3 +33,4 @@ cacheSolve <- function(x, ...) {
   x$setinv(m)
   m
 }
+
